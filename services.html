@@ -9,7 +9,7 @@
 
 <style>
 
-/* ---------- GLOBAL ---------- */
+/* GLOBAL */
 * {
     margin: 0;
     padding: 0;
@@ -23,7 +23,7 @@ body {
     overflow-x: hidden;
 }
 
-/* ---------- NAVIGATION ---------- */
+/* NAVIGATION */
 nav {
     display: flex;
     justify-content: space-between;
@@ -79,7 +79,7 @@ nav a:hover::after {
     width: 100%;
 }
 
-/* ---------- HERO ---------- */
+/* HERO */
 .hero {
     position: relative;
     height: 350px;
@@ -116,7 +116,7 @@ nav a:hover::after {
     font-weight: 800;
 }
 
-/* ---------- SERVICES SECTION ---------- */
+/* SECTIONS */
 section {
     padding: 90px 60px;
     text-align: center;
@@ -133,65 +133,103 @@ section p {
     opacity: 0.9;
 }
 
-/* ---------- SERVICES GRID ---------- */
+/* SERVICE CARDS */
 .services {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 35px;
     margin-top: 40px;
 }
 
-/* ---------- SERVICE CARDS ---------- */
 .card {
-    background: rgba(255,255,255,0.06);
+    background: linear-gradient(135deg, #E74C3C, #922B21);
     padding: 35px;
     border-radius: 18px;
-    border: 1px solid rgba(255,255,255,0.12);
-    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255,255,255,0.15);
+    box-shadow: 0 8px 25px rgba(231,76,60,0.25);
     transition: 0.3s;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-height: 260px;
+    color: white;
 }
 
 .card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 12px 30px rgba(231,76,60,0.25);
+    box-shadow: 0 12px 35px rgba(231,76,60,0.35);
 }
 
 .card h3 {
-    font-size: 22px;
+    font-size: 24px;
     margin-bottom: 15px;
+    font-weight: 700;
 }
 
 .card p {
     margin-bottom: 25px;
-    font-size: 16px;
+    font-size: 17px;
     line-height: 1.7;
-    color: rgba(255,255,255,0.95);
-    flex-grow: 1;
 }
 
-/* ---------- BUTTON ---------- */
+/* BUTTON */
 .btn {
     display: inline-block;
     padding: 12px 28px;
     border-radius: 10px;
-    background: #E74C3C;
-    color: white;
+    background: #ffffff;
+    color: #E74C3C;
     font-weight: 700;
     text-decoration: none;
     transition: 0.25s;
 }
 
 .btn:hover {
-    background: #c0392b;
+    background: #f2f2f2;
     transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(231,76,60,0.25);
 }
 
-/* ---------- FOOTER ---------- */
+/* PRICING PLANS */
+.pricing-plans {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 35px;
+    margin-top: 40px;
+}
+
+.plan {
+    background: linear-gradient(135deg, #922B21, #E74C3C);
+    padding: 40px;
+    border-radius: 18px;
+    border: 1px solid rgba(255,255,255,0.15);
+    box-shadow: 0 8px 25px rgba(231,76,60,0.25);
+    transition: 0.3s;
+}
+
+.plan:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 35px rgba(231,76,60,0.35);
+}
+
+.plan h3 {
+    font-size: 26px;
+    margin-bottom: 15px;
+}
+
+.plan .price {
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.plan ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 25px;
+}
+
+.plan ul li {
+    margin: 10px 0;
+    opacity: 0.9;
+}
+
+/* FOOTER */
 footer {
     padding: 30px;
     text-align: center;
@@ -201,7 +239,7 @@ footer {
     border-top: 1px solid rgba(255,255,255,0.08);
 }
 
-/* ---------- RESPONSIVE ---------- */
+/* RESPONSIVE */
 @media(max-width:768px) {
     nav {
         flex-direction: column;
@@ -245,120 +283,90 @@ footer {
     <h1>Our Services</h1>
 </div>
 
-<!-- SERVICES SECTION -->
+<!-- SERVICES -->
 <section>
-<h2>What We Offer</h2>
+<h2>Professional Services</h2>
 <p>Premium custom work designed to elevate your community with style and precision.</p>
 
 <div class="services">
 
-    <!-- SCRIPTING -->
     <div class="card">
-        <h3>💻 Scripting</h3>
-        <p>
-            Simple — <b>R$125+</b><br>
-            Medium — <b>R$725+</b><br>
-            Advanced — <b>R$3250+</b>
-        </p>
-        <a href="https://discord.gg/GHYsrwvaN7" class="btn" target="_blank">Order</a>
+        <h3>Scripting</h3>
+        <p>Average Price: <b>R$1400+</b></p>
+        <a href="https://discord.gg/GHYsrwvaN7" class="btn">Order Now</a>
     </div>
 
-    <!-- DISCORD SERVICES -->
     <div class="card">
-        <h3>🧩 Discord Services</h3>
-        <p>
-            Server Creation — <b>R$350</b><br>
-            Embeds — <b>R$90+</b>
-        </p>
-        <a href="https://discord.gg/GHYsrwvaN7" class="btn" target="_blank">Order</a>
+        <h3>Discord Services</h3>
+        <p>Average Price: <b>R$220+</b></p>
+        <a href="https://discord.gg/GHYsrwvaN7" class="btn">Order Now</a>
     </div>
 
-    <!-- GRAPHICS -->
     <div class="card">
-        <h3>🎨 Graphics + GFX</h3>
-        <p>
-            Logos — <b>R$350+</b><br>
-            Banners — <b>R$125+</b><br>
-            Customs — <b>R$425+</b>
-        </p>
-        <a href="https://discord.gg/GHYsrwvaN7" class="btn" target="_blank">Order</a>
+        <h3>Graphics & GFX</h3>
+        <p>Average Price: <b>R$300+</b></p>
+        <a href="https://discord.gg/GHYsrwvaN7" class="btn">Order Now</a>
     </div>
 
-    <!-- UI -->
     <div class="card">
-        <h3>🖥️ User Interface</h3>
-        <p>
-            Basic — <b>R$500+</b><br>
-            Intermediate — <b>R$1,000+</b><br>
-            Advanced — <b>R$2,000+</b>
-        </p>
-        <a href="https://discord.gg/GHYsrwvaN7" class="btn" target="_blank">Order</a>
+        <h3>User Interface (UI)</h3>
+        <p>Average Price: <b>R$1200+</b></p>
+        <a href="https://discord.gg/GHYsrwvaN7" class="btn">Order Now</a>
     </div>
 
-    <!-- CLOTHING -->
     <div class="card">
-        <h3>👕 Clothing</h3>
-        <p>
-            Top/Bottom — <b>R$75+</b><br>
-            Full Set — <b>R$150+</b>
-        </p>
-        <a href="https://discord.gg/GHYsrwvaN7" class="btn" target="_blank">Order</a>
+        <h3>Clothing</h3>
+        <p>Average Price: <b>R$110+</b></p>
+        <a href="https://discord.gg/GHYsrwvaN7" class="btn">Order Now</a>
     </div>
 
-    <!-- MODELING -->
     <div class="card">
-        <h3>📦 Modeling + Building</h3>
-        <p>
-            Minimum — <b>R$500+</b><br>
-            Custom — <b>R$2500+</b>
-        </p>
-        <a href="https://discord.gg/GHYsrwvaN7" class="btn" target="_blank">Order</a>
+        <h3>Modeling & Building</h3>
+        <p>Average Price: <b>R$1500+</b></p>
+        <a href="https://discord.gg/GHYsrwvaN7" class="btn">Order Now</a>
     </div>
 
 </div>
 </section>
 
-<!-- MARKETING SECTION -->
+<!-- MARKETING PLANS -->
 <section>
-<h2>Marketing Services</h2>
-<p>Nexora's Forge promotional services to boost your brand visibility.</p>
+<h2>Marketing Pricing Plans</h2>
+<p>Professional promotional packages designed to grow your brand and expand your reach.</p>
 
-<div class="services">
+<div class="pricing-plans">
 
-    <!-- ADVERTISING -->
-    <div class="card">
-        <h3>📊 Advertising Packages</h3>
-        <p>
-            Per Advertisement — <b>R$0.5</b><br>
-            Basic — <b>R$150</b><br>
-            Regular — <b>R$250</b><br>
-            Premium — <b>R$500</b>
-        </p>
-        <a href="https://discord.gg/GHYsrwvaN7" class="btn" target="_blank">Order</a>
+    <div class="plan">
+        <h3>Basic Plan</h3>
+        <div class="price">R$150</div>
+        <ul>
+            <li>Advertising Package</li>
+            <li>Partnership Package</li>
+            <li>Mutual Giveaway Package</li>
+        </ul>
+        <a href="https://discord.gg/GHYsrwvaN7" class="btn">Select Plan</a>
     </div>
 
-    <!-- PARTNERSHIPS -->
-    <div class="card">
-        <h3>🌐 Partnership Packages</h3>
-        <p>
-            Per Partnership — <b>R$60</b><br>
-            Basic — <b>R$150</b><br>
-            Regular — <b>R$250</b><br>
-            Premium — <b>R$500</b>
-        </p>
-        <a href="https://discord.gg/GHYsrwvaN7" class="btn" target="_blank">Order</a>
+    <div class="plan">
+        <h3>Regular Plan</h3>
+        <div class="price">R$250</div>
+        <ul>
+            <li>Advertising Package</li>
+            <li>Partnership Package</li>
+            <li>Mutual Giveaway Package</li>
+        </ul>
+        <a href="https://discord.gg/GHYsrwvaN7" class="btn">Select Plan</a>
     </div>
 
-    <!-- MUTUAL GIVEAWAYS -->
-    <div class="card">
-        <h3>🎉 Mutual Giveaway Packages</h3>
-        <p>
-            Per Giveaway — <b>R$45</b><br>
-            Basic — <b>R$133</b><br>
-            Regular — <b>R$225</b><br>
-            Premium — <b>R$450</b>
-        </p>
-        <a href="https://discord.gg/GHYsrwvaN7" class="btn" target="_blank">Order</a>
+    <div class="plan">
+        <h3>Premium Plan</h3>
+        <div class="price">R$500</div>
+        <ul>
+            <li>Advertising Package</li>
+            <li>Partnership Package</li>
+            <li>Mutual Giveaway Package</li>
+        </ul>
+        <a href="https://discord.gg/GHYsrwvaN7" class="btn">Select Plan</a>
     </div>
 
 </div>
