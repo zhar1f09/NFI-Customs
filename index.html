@@ -18,8 +18,9 @@
 }
 
 body {
-    background: linear-gradient(135deg, #0b3d91, #0862e9);
+    background: #0a0a0a;
     color: white;
+    overflow-x: hidden;
 }
 
 /* ---------- NAVIGATION ---------- */
@@ -27,60 +28,84 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 25px 60px;
-    background: rgba(0,0,0,0.2);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding: 22px 60px;
+    background: rgba(0,0,0,0.45);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
-nav h1 {
-    font-weight: 800;
-    font-size: 22px;
+.logo img {
+    height: 50px;
+    transition: 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.08);
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    gap: 25px;
+    gap: 30px;
 }
 
 nav a {
     text-decoration: none;
-    color: white;
+    color: rgba(255,255,255,0.85);
+    font-weight: 500;
     transition: 0.3s;
+    position: relative;
 }
 
 nav a:hover {
-    color: #1e90ff;
+    color: #E74C3C;
 }
 
-/* ---------- HERO BANNER ---------- */
-.hero-banner {
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background: #E74C3C;
+    transition: 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* ---------- HERO SECTION ---------- */
+.hero {
     position: relative;
-    height: 450px;
-    overflow: hidden;
+    height: 500px;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
+    overflow: hidden;
 }
 
-.hero-img {
+.hero img {
     position: absolute;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    filter: blur(6px) brightness(0.4);
     top: 0;
     left: 0;
     z-index: 0;
 }
 
-/* Dark overlay */
-.hero-banner::after {
+.hero::after {
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0,0,0,0.65);
+    background: linear-gradient(135deg, rgba(231,76,60,0.55), rgba(146,43,33,0.55));
     z-index: 1;
 }
 
@@ -90,10 +115,10 @@ nav a:hover {
     padding: 20px;
 }
 
-.hero-content h2 {
-    font-size: 42px;
+.hero-content h1 {
+    font-size: 52px;
     font-weight: 800;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .hero-content p {
@@ -102,69 +127,62 @@ nav a:hover {
     opacity: 0.9;
 }
 
-/* ---------- BUTTON ---------- */
 .btn {
     display: inline-block;
-    padding: 12px 30px;
+    padding: 14px 32px;
+    background: #E74C3C;
     border-radius: 10px;
-    background: #1e90ff;
     color: white;
-    font-weight: 600;
+    font-weight: 700;
     text-decoration: none;
     transition: 0.3s;
 }
 
 .btn:hover {
-    background: #187bcd;
-    transform: translateY(-2px);
+    background: #c0392b;
+    transform: translateY(-3px);
 }
 
-/* ---------- WHY CHOOSE US SECTION ---------- */
+/* ---------- FEATURES SECTION ---------- */
 section {
-    padding: 80px 60px;
+    padding: 90px 60px;
     text-align: center;
+}
+
+section h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
 }
 
 .features {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 35px;
     margin-top: 40px;
 }
 
 .feature-card {
-    background: rgba(0,0,0,0.25);
-    padding: 30px;
-    border-radius: 15px;
+    background: rgba(255,255,255,0.06);
+    padding: 35px;
+    border-radius: 18px;
+    border: 1px solid rgba(255,255,255,0.12);
+    backdrop-filter: blur(10px);
     transition: 0.3s;
 }
 
 .feature-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-}
-
-/* ---------- LOGO ---------- */
-.logo img {
-    height: 45px;
-    width: auto;
-    border-radius: 10px;
-    transition: 0.3s ease;
-    filter: drop-shadow(0 0 6px rgba(30,144,255,0.5));
-}
-
-.logo img:hover {
-    transform: scale(1.08);
-    filter: drop-shadow(0 0 12px rgba(30,144,255,0.9));
+    box-shadow: 0 12px 30px rgba(231,76,60,0.25);
 }
 
 /* ---------- FOOTER ---------- */
 footer {
     padding: 30px;
     text-align: center;
-    background: rgba(0,0,0,0.3);
+    background: rgba(0,0,0,0.4);
     font-size: 14px;
-    opacity: 0.8;
+    margin-top: 60px;
+    border-top: 1px solid rgba(255,255,255,0.08);
 }
 
 /* ---------- MOBILE ---------- */
@@ -175,8 +193,8 @@ footer {
         padding: 20px;
     }
 
-    .hero-banner h2 {
-        font-size: 28px;
+    .hero-content h1 {
+        font-size: 34px;
     }
 
     section {
@@ -185,16 +203,18 @@ footer {
 }
 
 </style>
-
-<link rel="icon" type="image/png" href="logo_ttransparent.webp">
 </head>
 
 <body>
 
+<!-- NAV -->
 <nav>
     <div class="logo">
-        <img src="logo_ttransparent.webp" alt="NFI's Custom Logo">
+        <a href="index.html">
+            <img src="logo_ttransparent.webp" alt="NFI's Custom Logo">
+        </a>
     </div>
+
     <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="services.html">Services</a></li>
@@ -205,39 +225,35 @@ footer {
 </nav>
 
 <!-- HERO -->
-<section class="hero-banner">
-    <img src="official_summit_banner.webp" alt="NFI's Custom Banner" class="hero-img">
-
+<section class="hero">
+    <img src="official_banner.webp" alt="Hero Background">
     <div class="hero-content">
-        <h2>Premium Designs for Your Server</h2>
-        <p>Professional Discord branding, logos, and custom graphics crafted to elevate your community.</p>
+        <h1>Premium Designs for Your Community</h1>
+        <p>Custom graphics, branding, and server assets crafted with precision and style.</p>
         <a href="services.html" class="btn">View Services</a>
     </div>
 </section>
 
-<!-- WHY CHOOSE US -->
+<!-- FEATURES -->
 <section>
-<h2>Why Choose NFI's Custom?</h2>
+    <h2>Why Choose NFI's Custom?</h2>
 
-<div class="features">
-    <div class="feature-card">
-        <h3>Professional Quality</h3>
-        <p>Clean, modern, high-resolution designs built for serious communities.</p>
+    <div class="features">
+        <div class="feature-card">
+            <h3>High Quality</h3>
+            <p>Every design is crafted with precision and attention to detail.</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>Fast Delivery</h3>
+            <p>Quick turnaround without sacrificing quality.</p>
+        </div>
+
+        <div class="feature-card">
+            <h3>Fully Custom</h3>
+            <p>Everything is made specifically for your server or brand.</p>
+        </div>
     </div>
-
-    <div class="feature-card">
-        <h3>Fast Delivery</h3>
-        <p>Quick turnaround times without sacrificing quality.</p>
-    </div>
-
-    <div class="feature-card">
-        <h3>Custom Made</h3>
-        <p>Every design is tailored specifically to your server.</p>
-    </div>
-</div>
-
-<br><br>
-<a href="https://discord.gg/wC2DM6HA" target="_blank" class="btn">Join Our Discord</a>
 </section>
 
 <footer>
