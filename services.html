@@ -17,7 +17,7 @@
 }
 
 body {
-  background: linear-gradient(135deg,#0f3ea8,#1e6cff,#3aa0ff);
+  background: #0a0a0a;
   color:white;
   line-height:1.6;
   overflow-x:hidden;
@@ -28,10 +28,10 @@ nav {
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:25px 60px;
-  background: rgba(0,0,0,0.35);
+  padding:22px 60px;
+  background: rgba(0,0,0,0.45);
   backdrop-filter: blur(12px);
-  border-bottom:1px solid rgba(255,255,255,0.1);
+  border-bottom:1px solid rgba(255,255,255,0.08);
   position:sticky;
   top:0;
   z-index:100;
@@ -39,14 +39,11 @@ nav {
 
 .logo img {
   height:50px;
-  width:auto;
   transition:0.3s ease;
-  filter: drop-shadow(0 0 12px #1e90ff);
 }
 
 .logo img:hover {
   transform: scale(1.08);
-  filter: drop-shadow(0 0 20px #1e90ff);
 }
 
 nav ul {
@@ -57,14 +54,14 @@ nav ul {
 
 nav a {
   text-decoration:none;
-  color:rgba(255,255,255,0.9);
-  transition:0.3s;
+  color:rgba(255,255,255,0.85);
   font-weight:500;
+  transition:0.3s;
   position:relative;
 }
 
 nav a:hover {
-  color:#ffffff;
+  color:#E74C3C;
 }
 
 nav a::after {
@@ -74,7 +71,7 @@ nav a::after {
   height:2px;
   bottom:-5px;
   left:0;
-  background:#ffffff;
+  background:#E74C3C;
   transition:0.3s;
 }
 
@@ -82,12 +79,12 @@ nav a:hover::after {
   width:100%;
 }
 
-/* ---------- HERO BANNER ---------- */
+/* ---------- HERO ---------- */
 .hero-banner {
   position:relative;
   height:400px;
   background:
-  linear-gradient(135deg, rgba(15,62,168,0.8), rgba(30,108,255,0.8)),
+  linear-gradient(135deg, rgba(231,76,60,0.7), rgba(146,43,33,0.7)),
   url("official_banner.webp") center/cover no-repeat;
   display:flex;
   align-items:center;
@@ -103,15 +100,13 @@ nav a:hover::after {
 
 /* ---------- SECTION ---------- */
 section {
-  padding:100px 60px;
+  padding:90px 60px;
   text-align:center;
 }
 
 section h2 {
   font-size:36px;
   margin-bottom:15px;
-  text-transform:uppercase;
-  letter-spacing:1px;
 }
 
 section p {
@@ -131,23 +126,17 @@ section p {
 
 /* ---------- SERVICE CARDS ---------- */
 .card {
-  background: rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.06);
   padding:35px;
   border-radius:18px;
-  border:1px solid rgba(255,255,255,0.25);
-  text-align:center;
+  border:1px solid rgba(255,255,255,0.12);
   backdrop-filter: blur(10px);
   transition:0.3s;
-  display:flex;
-  flex-direction:column;
-  justify-content:space-between;
-  min-height:260px;
 }
 
 .card:hover {
-  transform:translateY(-8px);
-  box-shadow:0 15px 35px rgba(0,0,0,0.3);
-  background: rgba(255,255,255,0.14);
+  transform:translateY(-6px);
+  box-shadow:0 12px 30px rgba(231,76,60,0.25);
 }
 
 .card h3 {
@@ -157,11 +146,10 @@ section p {
 }
 
 .card p {
-  margin-bottom:25px;
+  margin-bottom:20px;
   font-size:16px;
   line-height:1.7;
-  color:rgba(255,255,255,0.95);
-  flex-grow:1;
+  opacity:0.95;
 }
 
 /* ---------- PRICING PLANS ---------- */
@@ -173,18 +161,17 @@ section p {
 }
 
 .plan {
-  background: rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.06);
   padding:40px;
   border-radius:18px;
-  border:1px solid rgba(255,255,255,0.25);
+  border:1px solid rgba(255,255,255,0.12);
   backdrop-filter: blur(10px);
   transition:0.3s;
 }
 
 .plan:hover {
-  transform:translateY(-8px);
-  box-shadow:0 15px 35px rgba(0,0,0,0.3);
-  background: rgba(255,255,255,0.14);
+  transform:translateY(-6px);
+  box-shadow:0 12px 30px rgba(231,76,60,0.25);
 }
 
 .plan h3 {
@@ -196,6 +183,7 @@ section p {
   font-size:32px;
   font-weight:800;
   margin-bottom:20px;
+  color:#E74C3C;
 }
 
 .plan ul {
@@ -213,11 +201,10 @@ section p {
 footer {
   padding:30px;
   text-align:center;
-  background: rgba(0,0,0,0.35);
+  background: rgba(0,0,0,0.4);
   font-size:14px;
-  opacity:0.9;
-  margin-top:80px;
-  border-top:1px solid rgba(255,255,255,0.1);
+  margin-top:60px;
+  border-top:1px solid rgba(255,255,255,0.08);
 }
 
 /* ---------- RESPONSIVE ---------- */
@@ -301,4 +288,19 @@ footer {
   </div>
   <div class="plan">
     <h3>Premium Plan</h3>
-    <
+    <div class="price">R$500</div>
+    <ul>
+      <li>Advertising Package</li>
+      <li>Partnership Package</li>
+      <li>Mutual Giveaway Package</li>
+    </ul>
+  </div>
+</div>
+</section>
+
+<footer>
+© 2026 NFI's Custom. All rights reserved.
+</footer>
+
+</body>
+</html>
