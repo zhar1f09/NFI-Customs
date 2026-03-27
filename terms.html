@@ -116,34 +116,49 @@ nav a:hover::after {
     font-weight: 800;
 }
 
-/* SECTIONS */
+/* TERMS SECTION */
 section {
     padding: 90px 60px;
     text-align: center;
 }
 
-section h2 {
-    font-size: 32px;
-    margin-bottom: 15px;
-    color: #E74C3C;
+.terms-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 35px;
+    margin-top: 40px;
 }
 
-section p {
-    max-width: 750px;
-    margin: 0 auto 25px auto;
-    opacity: 0.9;
-    line-height: 1.7;
-}
-
-section ul {
-    max-width: 750px;
-    margin: 0 auto;
+.term-box {
+    background: linear-gradient(135deg, #922B21, #E74C3C);
+    padding: 35px;
+    border-radius: 18px;
+    border: 1px solid rgba(255,255,255,0.15);
+    box-shadow: 0 8px 25px rgba(231,76,60,0.25);
+    transition: 0.3s;
     text-align: left;
+}
+
+.term-box:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 35px rgba(231,76,60,0.35);
+}
+
+.term-box h3 {
+    font-size: 24px;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.term-box p,
+.term-box ul li {
+    font-size: 16px;
+    opacity: 0.95;
     line-height: 1.7;
 }
 
-section ul li {
-    margin: 10px 0;
+.term-box ul {
+    margin-left: 18px;
 }
 
 /* FOOTER */
@@ -200,50 +215,56 @@ footer {
     <h1>Terms of Service</h1>
 </div>
 
-<!-- TERMS SECTIONS -->
+<!-- TERMS -->
 <section>
-    <h2>1. Payments</h2>
-    <p>All payments must be made in full upfront unless otherwise agreed. Work will only begin once payment has been confirmed.</p>
-</section>
+    <div class="terms-grid">
 
-<section>
-    <h2>2. Refund Policy</h2>
-    <p>All sales are final. Refunds are only issued if the project has not yet started or if NFI’s Custom cancels the commission.</p>
-</section>
+        <div class="term-box">
+            <h3>1. Payments</h3>
+            <p>All payments must be made upfront unless otherwise agreed. Work begins only after payment is confirmed.</p>
+        </div>
 
-<section>
-    <h2>3. Ownership & Usage</h2>
-    <ul>
-        <li>Clients may use the final product for personal or server-related purposes.</li>
-        <li>Reselling, redistributing, or claiming the work as your own is strictly prohibited.</li>
-        <li>NFI’s Custom retains the right to showcase completed work in portfolios unless privacy is requested.</li>
-    </ul>
-</section>
+        <div class="term-box">
+            <h3>2. Refund Policy</h3>
+            <p>All sales are final. Refunds are only issued if the project has not started or if NFI’s Custom cancels the commission.</p>
+        </div>
 
-<section>
-    <h2>4. Turnaround Time</h2>
-    <p>Delivery times vary depending on project complexity. Rush fees may apply for urgent orders.</p>
-</section>
+        <div class="term-box">
+            <h3>3. Ownership & Usage</h3>
+            <ul>
+                <li>You may use the final product for personal or server use.</li>
+                <li>You may not resell, redistribute, or claim the work as your own.</li>
+                <li>NFI’s Custom may showcase completed work unless privacy is requested.</li>
+            </ul>
+        </div>
 
-<section>
-    <h2>5. Revisions</h2>
-    <p>Each service includes a limited number of revisions. Excessive revision requests may incur additional charges.</p>
-</section>
+        <div class="term-box">
+            <h3>4. Turnaround Time</h3>
+            <p>Delivery times vary depending on complexity. Rush fees may apply for urgent orders.</p>
+        </div>
 
-<section>
-    <h2>6. Chargebacks</h2>
-    <p>Any chargeback will result in immediate termination of services, permanent blacklisting, and reporting to relevant platforms.</p>
-</section>
+        <div class="term-box">
+            <h3>5. Revisions</h3>
+            <p>Each service includes a limited number of revisions. Excessive revisions may incur additional charges.</p>
+        </div>
 
-<section>
-    <h2>7. Prohibited Use</h2>
-    <p>Our work may not be used for illegal, harmful, or malicious purposes under any circumstances.</p>
-</section>
+        <div class="term-box">
+            <h3>6. Chargebacks</h3>
+            <p>Any chargeback results in immediate blacklisting and reporting to relevant platforms.</p>
+        </div>
 
-<section>
-    <h2>8. Contact</h2>
-    <p>For inquiries or support, please join our Discord community:  
-    <a href="https://discord.gg/GHYsrwvaN7">https://discord.gg/GHYsrwvaN7</a></p>
+        <div class="term-box">
+            <h3>7. Prohibited Use</h3>
+            <p>Our work may not be used for illegal, harmful, or malicious purposes.</p>
+        </div>
+
+        <div class="term-box">
+            <h3>8. Contact</h3>
+            <p>For support or questions, join our Discord:<br>
+            <a href="https://discord.gg/GHYsrwvaN7" style="color:white; font-weight:600;">discord.gg/GHYsrwvaN7</a></p>
+        </div>
+
+    </div>
 </section>
 
 <footer>
