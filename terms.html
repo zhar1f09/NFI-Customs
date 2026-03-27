@@ -8,102 +8,243 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 
 <style>
-body {
+
+/* GLOBAL */
+* {
     margin: 0;
     padding: 0;
-    background: #0a0a0a;
-    color: #ffffff;
+    box-sizing: border-box;
     font-family: 'Inter', sans-serif;
-    line-height: 1.8;
 }
 
-.container {
-    max-width: 900px;
-    margin: 60px auto;
-    padding: 20px;
+body {
+    background: #0a0a0a;
+    color: white;
+    overflow-x: hidden;
 }
 
-h1 {
-    font-size: 42px;
-    margin-bottom: 20px;
+/* NAVIGATION */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 60px;
+    background: rgba(0,0,0,0.45);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo img {
+    height: 50px;
+    transition: 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.08);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: rgba(255,255,255,0.85);
+    font-weight: 500;
+    transition: 0.3s;
+    position: relative;
+}
+
+nav a:hover {
     color: #E74C3C;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background: #E74C3C;
+    transition: 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* HERO */
+.hero {
+    position: relative;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.hero img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(6px) brightness(0.35);
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(231,76,60,0.55), rgba(146,43,33,0.55));
+    z-index: 1;
+}
+
+.hero h1 {
+    position: relative;
+    z-index: 2;
+    font-size: 48px;
     font-weight: 800;
 }
 
-h2 {
-    margin-top: 40px;
-    color: #E74C3C;
-    font-weight: 600;
-}
-
-p, li {
-    font-size: 16px;
-    margin-bottom: 15px;
-}
-
-ul {
-    margin-left: 20px;
-}
-
-a {
-    color: #E74C3C;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-footer {
+/* SECTIONS */
+section {
+    padding: 90px 60px;
     text-align: center;
-    padding: 30px;
-    margin-top: 60px;
-    background: rgba(255,255,255,0.05);
-    border-top: 1px solid rgba(255,255,255,0.1);
-    font-size: 14px;
 }
+
+section h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+    color: #E74C3C;
+}
+
+section p {
+    max-width: 750px;
+    margin: 0 auto 25px auto;
+    opacity: 0.9;
+    line-height: 1.7;
+}
+
+section ul {
+    max-width: 750px;
+    margin: 0 auto;
+    text-align: left;
+    line-height: 1.7;
+}
+
+section ul li {
+    margin: 10px 0;
+}
+
+/* FOOTER */
+footer {
+    padding: 30px;
+    text-align: center;
+    background: rgba(0,0,0,0.4);
+    font-size: 14px;
+    margin-top: 60px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+/* RESPONSIVE */
+@media(max-width:768px) {
+    nav {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    section {
+        padding: 60px 20px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+}
+
 </style>
 </head>
 
 <body>
 
-<div class="container">
+<!-- NAV -->
+<nav>
+    <div class="logo">
+        <a href="index.html">
+            <img src="NFI.webp" alt="NFI's Custom Logo">
+        </a>
+    </div>
 
-<h1>Terms of Service</h1>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="terms.html">Terms</a></li>
+        <li><a href="https://discord.gg/GHYsrwvaN7" target="_blank">Discord</a></li>
+    </ul>
+</nav>
 
-<p>Welcome to <strong>NFI’s Custom</strong>. By commissioning, purchasing, or using our services, you agree to the following terms and conditions. Please review them carefully before proceeding.</p>
-
-<h2>1. Payments</h2>
-<p>All payments must be made in full upfront unless otherwise agreed in writing. Work will commence only after payment has been confirmed.</p>
-
-<h2>2. Refund Policy</h2>
-<p>All sales are final. Refunds will only be issued if the project has not yet started or if <strong>NFI’s Custom</strong> cancels the commission.</p>
-
-<h2>3. Ownership & Usage</h2>
-<ul>
-    <li>Clients may use the final product for personal or server-related purposes.</li>
-    <li>Reselling, redistributing, or claiming the work as your own is strictly prohibited.</li>
-    <li><strong>NFI’s Custom</strong> retains the right to showcase completed work in portfolios unless a privacy request is made.</li>
-</ul>
-
-<h2>4. Turnaround Time</h2>
-<p>Delivery timelines vary depending on project complexity. Expedited requests may incur additional rush fees.</p>
-
-<h2>5. Revisions</h2>
-<p>Each service includes a set number of revisions. Requests beyond the agreed limit may result in additional charges.</p>
-
-<h2>6. Chargebacks</h2>
-<p>Any chargeback will result in immediate termination of services, permanent blacklisting, and reporting to relevant platforms.</p>
-
-<h2>7. Prohibited Use</h2>
-<p>Our work may not be used for illegal, harmful, or malicious purposes under any circumstances.</p>
-
-<h2>8. Contact</h2>
-<p>For inquiries or support, please join our Discord community:  
-<a href="https://discord.gg/GHYsrwvaN7">https://discord.gg/GHYsrwvaN7</a></p>
-
+<!-- HERO -->
+<div class="hero">
+    <img src="official_banner.webp" alt="Terms Background">
+    <h1>Terms of Service</h1>
 </div>
+
+<!-- TERMS SECTIONS -->
+<section>
+    <h2>1. Payments</h2>
+    <p>All payments must be made in full upfront unless otherwise agreed. Work will only begin once payment has been confirmed.</p>
+</section>
+
+<section>
+    <h2>2. Refund Policy</h2>
+    <p>All sales are final. Refunds are only issued if the project has not yet started or if NFI’s Custom cancels the commission.</p>
+</section>
+
+<section>
+    <h2>3. Ownership & Usage</h2>
+    <ul>
+        <li>Clients may use the final product for personal or server-related purposes.</li>
+        <li>Reselling, redistributing, or claiming the work as your own is strictly prohibited.</li>
+        <li>NFI’s Custom retains the right to showcase completed work in portfolios unless privacy is requested.</li>
+    </ul>
+</section>
+
+<section>
+    <h2>4. Turnaround Time</h2>
+    <p>Delivery times vary depending on project complexity. Rush fees may apply for urgent orders.</p>
+</section>
+
+<section>
+    <h2>5. Revisions</h2>
+    <p>Each service includes a limited number of revisions. Excessive revision requests may incur additional charges.</p>
+</section>
+
+<section>
+    <h2>6. Chargebacks</h2>
+    <p>Any chargeback will result in immediate termination of services, permanent blacklisting, and reporting to relevant platforms.</p>
+</section>
+
+<section>
+    <h2>7. Prohibited Use</h2>
+    <p>Our work may not be used for illegal, harmful, or malicious purposes under any circumstances.</p>
+</section>
+
+<section>
+    <h2>8. Contact</h2>
+    <p>For inquiries or support, please join our Discord community:  
+    <a href="https://discord.gg/GHYsrwvaN7">https://discord.gg/GHYsrwvaN7</a></p>
+</section>
 
 <footer>
 © 2026 NFI's Custom. All rights reserved.
