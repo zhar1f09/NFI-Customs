@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Terms of Service - Nexora’s Forge</title>
+<title>Nocturne Designs - Terms of Service</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 
@@ -20,6 +20,7 @@ body {
     background: #0a0a0a;
     color: white;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 /* NAVIGATION */
@@ -81,7 +82,7 @@ nav a:hover::after {
 /* HERO */
 .hero {
     position: relative;
-    height: 350px;
+    height: 450px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -108,11 +109,20 @@ nav a:hover::after {
     z-index: 1;
 }
 
-.hero h1 {
+.hero-content {
     position: relative;
     z-index: 2;
-    font-size: 48px;
+}
+
+.hero h1 {
+    font-size: 58px;
     font-weight: 800;
+}
+
+.hero p {
+    margin-top: 10px;
+    font-size: 20px;
+    opacity: 0.9;
 }
 
 /* TERMS SECTION */
@@ -121,16 +131,28 @@ section {
     text-align: center;
 }
 
+section h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+section p.subtitle {
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+    opacity: 0.9;
+}
+
+/* TERMS GRID */
 .terms-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 35px;
     margin-top: 40px;
 }
 
 .term-box {
-    background: linear-gradient(135deg, #922B21, #E74C3C);
-    padding: 35px;
+    background: linear-gradient(135deg, #E74C3C, #922B21);
+    padding: 30px;
     border-radius: 18px;
     border: 1px solid rgba(255,255,255,0.15);
     box-shadow: 0 8px 25px rgba(231,76,60,0.25);
@@ -140,24 +162,16 @@ section {
 
 .term-box:hover {
     transform: translateY(-6px);
-    box-shadow: 0 12px 35px rgba(231,76,60,0.35);
 }
 
 .term-box h3 {
-    font-size: 24px;
-    margin-bottom: 12px;
-    font-weight: 700;
+    font-size: 22px;
+    margin-bottom: 10px;
 }
 
-.term-box p,
-.term-box ul li {
-    font-size: 16px;
+.term-box p {
     opacity: 0.95;
     line-height: 1.7;
-}
-
-.term-box ul {
-    margin-left: 18px;
 }
 
 /* FOOTER */
@@ -174,7 +188,7 @@ footer {
 <body>
 
 <nav>
-    <div class="logo"><img src="logo.png" alt="Nexora’s Forge"></div>
+    <div class="logo"><img src="logo.png" alt="Nocturne Designs"></div>
     <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="terms.html">Terms</a></li>
@@ -183,50 +197,62 @@ footer {
 </nav>
 
 <div class="hero">
-    <img src="banner.jpg" alt="Forge Banner">
-    <h1>Order Terms of Service</h1>
+    <img src="banner.jpg" alt="Terms Banner">
+    <div class="hero-content">
+        <h1>Order Regulations</h1>
+        <p>Review and comply with all terms before placing an order.</p>
+    </div>
 </div>
 
 <section>
-    <p>Please review the following terms before placing an order. These guidelines ensure fairness, efficiency, and professionalism in every transaction.</p>
+    <h2>Illustrate Designs – Terms of Service</h2>
+    <p class="subtitle">Failure to adhere to these rules may result in being blacklisted from ordering services.</p>
 
     <div class="terms-grid">
         <div class="term-box">
-            <h3>01. Refunds & Cancellations</h3>
-            <p>Refunds are only considered under reasonable circumstances and must be mutually agreed upon by both client and designer. Credits may be issued if approved by HR. Minor delays do not qualify for refunds unless deemed critical. Orders canceled before 70% completion require 50% payment; after 70% completion, full payment is required.</p>
+            <h3>Payments & Assets</h3>
+            <p>A 50% payment is required before work begins and before receiving the final, unwatermarked product. PSD/PDN files are not provided.</p>
         </div>
 
         <div class="term-box">
-            <h3>02. Order Details</h3>
-            <p>Clients must provide all necessary information required for the designer to fulfill the order. Missing or incomplete details may delay production.</p>
+            <h3>Requesting Designers</h3>
+            <p>You may request a specific designer, but arrangements must be made before the order starts.</p>
         </div>
 
         <div class="term-box">
-            <h3>03. Payment Policy</h3>
-            <p>Payment is required upon opening an order. Designers will not begin work until payment has been confirmed with sufficient proof of purchase.</p>
+            <h3>Reselling</h3>
+            <p>Reselling our products or assets is strictly prohibited. Violations will result in moderation.</p>
         </div>
 
         <div class="term-box">
-            <h3>04. Completion Time</h3>
-            <p>Delivery timelines vary depending on workload and complexity. Clients are expected to provide order details promptly to avoid delays.</p>
+            <h3>Refunds</h3>
+            <p>No refunds or compensation are offered after payment unless an issue is caused by our end.</p>
         </div>
 
         <div class="term-box">
-            <h3>05. Finalized Sales</h3>
-            <p>Once a product has been delivered and confirmed, the sale is final. No refunds or cancellations will be issued after 5–7 business days.</p>
+            <h3>Lost Products</h3>
+            <p>We are not responsible for lost products. Clients must store their delivered assets safely.</p>
         </div>
 
         <div class="term-box">
-            <h3>06. Designer Pinging</h3>
-            <p>Excessive or repeated pinging of designers will result in immediate ticket closure. Refunds will not be issued in such cases.</p>
+            <h3>Changing Orders</h3>
+            <p>No changes are allowed after completion. Minor adjustments may be requested during development.</p>
+        </div>
+
+        <div class="term-box">
+            <h3>Gamepass Purchases</h3>
+            <p>Only purchase gamepasses from individuals with the @Payment Helper role. We are not responsible for scams outside the official Purchase Hub.</p>
+        </div>
+
+        <div class="term-box">
+            <h3>Custom Bots</h3>
+            <p>Bots may be deactivated at any time. Services must comply with Discord and Roblox TOS. Hosting is provided via GalaxyGate; inactive servers may have bots deactivated.</p>
         </div>
     </div>
-
-    <p style="margin-top:40px; font-size:14px; opacity:0.8;">Not all regulations are listed here — use common sense. For inquiries, please open a support ticket.</p>
 </section>
 
 <footer>
-    © 2026 Nexora’s Forge. All rights reserved.
+    © 2026 Nocturne Designs. All rights reserved.
 </footer>
 
 </body>
